@@ -1,13 +1,11 @@
-import { Head } from "minista"
-import '@/styles'
+export const metadata = {
+    title: 'Home'
+}
 
 export default function () {
   return (
     <>
-      <Head>
-        <title>Hello!</title>
-      </Head>
-      <h1>Hello!</h1>
+      <h1>Main</h1>
     </>
   )
 }
