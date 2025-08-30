@@ -1,26 +1,54 @@
 {
-  "name": "minista-project",
+  "name": "stream-vibe",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "minista",
     "build": "minista build",
-    "preview": "minista preview"
+    "preview": "minista preview",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+    "prepare": "husky",
+    "lint:eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:stylelint": "stylelint **/*.{scss,css}",
+    "lint": "npm run lint:eslint && npm run lint:stylelint"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ],
+    "**/*.{css,scss}": [
+      "stylelint --fix",
+      "prettier --write --ignore-unknown"
+    ]
   },
   "prettier": {
     "semi": false
   },
   "devDependencies": {
-    "minista": "^3.1.12",
-    "postcss-pxtorem": "^6.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.91.0"
+    "@eslint/js": "9.34.0",
+    "eslint": "9.34.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-config-xo": "0.49.0",
+    "eslint-plugin-simple-import-sort": "12.1.1",
+    "globals": "16.3.0",
+    "husky": "9.1.7",
+    "lint-staged": "16.1.5",
+    "minista": "3.1.12",
+    "postcss-pxtorem": "6.1.0",
+    "prettier": "3.6.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "1.91.0",
+    "stylelint": "16.23.1",
+    "stylelint-config-recess-order": "7.2.0",
+    "stylelint-config-standard-scss": "15.0.1",
+    "stylelint-order": "7.0.0"
   },
   "dependencies": {
-    "@a1rth/css-normalize": "^1.2.1",
-    "classnames": "^2.5.1",
-    "imask": "^7.6.1",
-    "swiper": "^11.2.10"
+    "@a1rth/css-normalize": "1.2.1",
+    "classnames": "2.5.1",
+    "imask": "7.6.1",
+    "swiper": "11.2.10"
   }
 }
