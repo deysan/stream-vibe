@@ -6,6 +6,25 @@ export default function () {
   return (
     <>
       <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
+      <h1>Main</h1>
     </>
   )
 }

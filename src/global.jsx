@@ -7,7 +7,7 @@ import Footer from "@/layouts/Footer"
 import Header from "@/layouts/Header"
 
 export default function (props) {
-  const { children, title } = props
+  const { children, title, url } = props
 
   return (
     <>
@@ -15,26 +15,26 @@ export default function (props) {
         <title>Stream Vibe | {title}</title>
         <script src="/src/main.js" type="module" />
         <link
+          href="/apple-touch-icon.png"
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
         />
         <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
           href="/favicon-32x32.png"
+          rel="icon"
+          sizes="32x32"
+          type="image/png"
         />
         <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
           href="/favicon-16x16.png"
+          rel="icon"
+          sizes="16x16"
+          type="image/png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link href="/site.webmanifest" rel="manifest" />
       </Head>
 
-      <Header />
+      <Header url={url} />
       <Content>{children}</Content>
       <Footer />
     </>
