@@ -6,7 +6,7 @@ import BurgerButton from "@/components/BurgerButton"
 import Button from "@/components/Button"
 import Logo from "@/components/Logo"
 
-const Header = ({ url }) => {
+const Header = ({ isFixed, url }) => {
   const menuItems = [
     {
       label: "Home",
@@ -27,7 +27,12 @@ const Header = ({ url }) => {
   ]
 
   return (
-    <header className="header" data-js-overlay-menu="">
+    <header
+      className={classNames("header", {
+        "is-fixed": isFixed,
+      })}
+      data-js-overlay-menu=""
+    >
       <div className="header__inner container">
         <Logo className="header__logo" loading="eager" />
 

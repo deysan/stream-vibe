@@ -6,9 +6,7 @@ import Content from "@/layouts/Content"
 import Footer from "@/layouts/Footer"
 import Header from "@/layouts/Header"
 
-export default function (props) {
-  const { children, title, url } = props
-
+export default function ({ children, isHeaderFixed, title, url }) {
   return (
     <>
       <Head htmlAttributes={{ lang: "en" }}>
@@ -34,7 +32,7 @@ export default function (props) {
         <link href="/site.webmanifest" rel="manifest" />
       </Head>
 
-      <Header url={url} />
+      <Header isFixed={isHeaderFixed} url={url} />
       <Content>{children}</Content>
       <Footer />
     </>
